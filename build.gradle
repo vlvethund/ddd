@@ -1,0 +1,35 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.1' // Apply Spring Boot plugin
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE' // Optional for managing dependencies
+    id 'java' // Apply the Java plugin
+}
+
+group = 'ddd-start' // Set the groupId (like Maven's groupId)
+version = '2.0' // Set the version
+sourceCompatibility = '17' // Java version as specified in the Maven POM
+targetCompatibility = '17'
+
+repositories {
+    mavenCentral() // Set repository to Maven Central
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+    runtimeOnly 'com.h2database:h2' // Runtime scope for H2 database
+    runtimeOnly 'mysql:mysql-connector-java' // Runtime scope for MySQL connector
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' // Test dependencies
+    testImplementation 'org.junit.jupiter:junit-jupiter-api' // Optional, for JUnit 5 (if needed)
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine' // Optional, for JUnit 5 (if needed)
+}
+
+test {
+    useJUnitPlatform() // Enable JUnit 5
+}
