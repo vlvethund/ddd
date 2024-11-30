@@ -11,6 +11,12 @@ gradle version:  gradle-7.2-bin <br>
 - ````grant all privileges on *.* to 'shopuser'@'localhost';````
 - ````create database shop;````
 
-이제 booting 하면 됩니다
+순서대로 
+- ddl.sql 파일 쿼리들 실행
+- init.sql 파일 쿼리들 실행
 
-<br>DDD START!의 재출간판인 [도메인 주도 개발 시작하기](https://www.hanbit.co.kr/store/books/look.php?p_code=B4309942517) 책의 예제 코드입니다.
+
+## Spring Boot 실행 
+이제 booting 하면 됩니다 <br>
+브라우저에서 http://localhost:8080 으로 접속 <br>
+Select * from member; 로 id/pw 확인
